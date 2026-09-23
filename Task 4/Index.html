@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Custom UI Dashboard</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Background Blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <!-- Main Container Layout -->
+  <div class="dashboard-container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">
+          <i class="fa-solid fa-cube"></i>
+        </div>
+        <span class="brand-name">Aether<span>UI</span></span>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="#" class="nav-link active">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="fa-solid fa-wallet"></i>
+          <span>Analytics</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Projects</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="fa-solid fa-user-group"></i>
+          <span>Community</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="user-profile">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250" alt="User Avatar" class="avatar">
+        <div class="user-info">
+          <h4>Elena Rostova</h4>
+          <p>Product Designer</p>
+        </div>
+        <button class="icon-btn logout-btn" title="Log Out">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Header Bar -->
+      <header class="top-bar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search analytics, tasks, or members...">
+        </div>
+
+        <div class="header-actions">
+          <button class="icon-btn notification-btn">
+            <i class="fa-regular fa-bell"></i>
+            <span class="badge"></span>
+          </button>
+          <button class="btn btn-primary">
+            <i class="fa-solid fa-plus"></i>
+            <span>New Action</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Welcome Banner -->
+      <section class="banner-card">
+        <div class="banner-text">
+          <span class="tag"><i class="fa-solid fa-wand-magic-sparkles"></i> CSS Grid & Flexbox Magic</span>
+          <h2>Welcome Back, Elena!</h2>
+          <p>Your creative dashboard is live. Explore custom CSS effects like Glassmorphism, Animated Gradients, and Custom Scrollbars.</p>
+        </div>
+        <div class="banner-badge">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+      </section>
+
+      <!-- Metrics Row -->
+      <section class="metrics-grid">
+        <div class="card metric-card">
+          <div class="card-header">
+            <span class="metric-icon cyan"><i class="fa-solid fa-bolt"></i></span>
+            <span class="trend positive"><i class="fa-solid fa-arrow-up"></i> +18.4%</span>
+          </div>
+          <div class="card-body">
+            <h3>$48,290</h3>
+            <p>Total Revenue</p>
+          </div>
+        </div>
+
+        <div class="card metric-card">
+          <div class="card-header">
+            <span class="metric-icon purple"><i class="fa-solid fa-users"></i></span>
+            <span class="trend positive"><i class="fa-solid fa-arrow-up"></i> +12.1%</span>
+          </div>
+          <div class="card-body">
+            <h3>14,820</h3>
+            <p>Active Users</p>
+          </div>
+        </div>
+
+        <div class="card metric-card">
+          <div class="card-header">
+            <span class="metric-icon pink"><i class="fa-solid fa-chart-line"></i></span>
+            <span class="trend negative"><i class="fa-solid fa-arrow-down"></i> -2.4%</span>
+          </div>
+          <div class="card-body">
+            <h3>89.6%</h3>
+            <p>Conversion Rate</p>
+          </div>
+        </div>
+
+        <div class="card metric-card">
+          <div class="card-header">
+            <span class="metric-icon orange"><i class="fa-solid fa-star"></i></span>
+            <span class="trend positive"><i class="fa-solid fa-arrow-up"></i> +5.8%</span>
+          </div>
+          <div class="card-body">
+            <h3>4.9 / 5</h3>
+            <p>User Satisfaction</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visual Content Section -->
+      <section class="content-grid">
+        
+        <!-- Activity Card with CSS Bar Chart -->
+        <div class="card chart-card">
+          <div class="card-title-row">
+            <h3>Weekly Engagement</h3>
+            <span class="sub-text">Mon - Sun Performance</span>
+          </div>
+          <div class="css-chart">
+            <div class="bar-group">
+              <div class="bar" style="--height: 65%;"></div>
+              <span>Mon</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="--height: 85%;"></div>
+              <span>Tue</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="--height: 45%;"></div>
+              <span>Wed</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="--height: 95%;"></div>
+              <span>Thu</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="--height: 70%;"></div>
+              <span>Fri</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="--height: 50%;"></div>
+              <span>Sat</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="--height: 30%;"></div>
+              <span>Sun</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Projects List -->
+        <div class="card projects-card">
+          <div class="card-title-row">
+            <h3>Active Projects</h3>
+            <a href="#" class="link-btn">View All</a>
+          </div>
+          <ul class="project-list">
+            <li class="project-item">
+              <div class="project-icon bg-cyan"><i class="fa-solid fa-code"></i></div>
+              <div class="project-info">
+                <h4>Design System 2.0</h4>
+                <p>Updated 2 hrs ago</p>
+              </div>
+              <span class="status-badge active">In Progress</span>
+            </li>
+            <li class="project-item">
+              <div class="project-icon bg-purple"><i class="fa-solid fa-mobile-screen"></i></div>
+              <div class="project-info">
+                <h4>Mobile App Revamp</h4>
+                <p>Updated 5 hrs ago</p>
+              </div>
+              <span class="status-badge active">In Progress</span>
+            </li>
+            <li class="project-item">
+              <div class="project-icon bg-pink"><i class="fa-solid fa-palette"></i></div>
+              <div class="project-info">
+                <h4>Brand Refresh Campaign</h4>
+                <p>Completed Yesterday</p>
+              </div>
+              <span class="status-badge completed">Completed</span>
+            </li>
+          </ul>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

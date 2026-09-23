@@ -1,0 +1,297 @@
+/* ==========================================================================
+   IEEE CONFERENCE TEMPLATE (US LETTER FORMAT)
+   ========================================================================== */
+
+@page {
+  size: letter;
+  margin: 0.75in 0.625in 1in 0.625in;
+}
+
+:root {
+  --font-serif: "Times New Roman", Times, serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --text-color: #000000;
+  --bg-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e2e8f0;
+  font-family: var(--font-serif);
+  color: var(--text-color);
+  line-height: 1.15;
+  font-size: 10pt;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+}
+
+/* Action Button */
+.print-actions {
+  margin-bottom: 20px;
+}
+
+.print-actions button {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.print-actions button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Page Layout Container */
+.ieee-paper {
+  background-color: var(--bg-color);
+  width: 8.5in;
+  min-height: 11in;
+  padding: 0.75in 0.625in 1in 0.625in;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   HEADER SECTION
+   ========================================================================== */
+.paper-header {
+  text-align: center;
+  margin-bottom: 16pt;
+}
+
+.paper-title {
+  font-size: 24pt;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 4pt;
+}
+
+.title-note {
+  font-size: 9pt;
+  font-style: italic;
+  margin-bottom: 16pt;
+}
+
+/* Author Grid Layout (3-Column Grid for 6 Authors) */
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16pt 12pt;
+  text-align: center;
+  margin-bottom: 12pt;
+}
+
+.author-block {
+  display: flex;
+  flex-direction: column;
+  font-size: 10pt;
+}
+
+.author-name {
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+.author-dept, 
+.author-org, 
+.author-city,
+.author-email {
+  font-style: italic;
+  font-size: 9pt;
+}
+
+/* Funding Agency Unnumbered Box */
+.funding-box {
+  border: 1px solid #000;
+  padding: 6pt 10pt;
+  font-size: 9pt;
+  margin-bottom: 12pt;
+  background-color: #fafafa;
+}
+
+/* ==========================================================================
+   TWO COLUMN BODY
+   ========================================================================== */
+.paper-body {
+  column-count: 2;
+  column-gap: 0.24in;
+  column-fill: balance;
+  text-align: justify;
+}
+
+p {
+  text-indent: 1em;
+  margin-bottom: 4pt;
+  font-size: 10pt;
+}
+
+/* Abstract & Keywords */
+.abstract-section {
+  margin-bottom: 8pt;
+}
+
+.abstract-text, .keywords-text {
+  text-indent: 0;
+  font-size: 9pt;
+  line-height: 1.15;
+}
+
+.keywords-text {
+  margin-top: 4pt;
+}
+
+/* Headings */
+h2 {
+  font-size: 10pt;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 4pt;
+  break-after: avoid;
+}
+
+h3 {
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: italic;
+  text-indent: 1em;
+  margin-top: 8pt;
+  margin-bottom: 3pt;
+  break-after: avoid;
+}
+
+/* Bullet list override */
+.paper-bullet-list {
+  margin-left: 1.5em;
+  font-size: 10pt;
+  margin-bottom: 4pt;
+}
+
+/* Equations */
+.equation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6pt 0;
+  text-indent: 0;
+  padding: 0 8px;
+}
+
+/* Figures */
+.paper-figure {
+  margin: 10pt 0;
+  text-indent: 0;
+  text-align: center;
+  break-inside: avoid;
+}
+
+.figure-placeholder {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9pt;
+  color: #333;
+  margin-bottom: 4pt;
+}
+
+figcaption {
+  font-size: 8pt;
+  text-align: justify;
+  line-height: 1.1;
+}
+
+/* Tables */
+.paper-table {
+  margin: 10pt 0;
+  text-indent: 0;
+  text-align: center;
+  break-inside: avoid;
+}
+
+.table-caption {
+  font-size: 8pt;
+  margin-bottom: 4pt;
+  text-transform: uppercase;
+}
+
+.table-caption span {
+  font-weight: normal;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8pt;
+}
+
+th, td {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 3pt 4pt;
+  text-align: center;
+}
+
+.table-footnote {
+  font-size: 7.5pt;
+  text-align: left;
+  margin-top: 2pt;
+}
+
+/* References Section */
+.references h2 {
+  margin-bottom: 6pt;
+}
+
+.references-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.references-list li {
+  font-size: 8pt;
+  line-height: 1.15;
+  margin-bottom: 4pt;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+.references-list li::before {
+  content: "[" counter(ref-counter) "] ";
+  counter-increment: ref-counter;
+}
+
+.references-list {
+  counter-reset: ref-counter;
+}
+
+/* Print Stylesheet */
+@media print {
+  body {
+    background-color: transparent;
+    padding: 0;
+  }
+  .print-actions {
+    display: none;
+  }
+  .ieee-paper {
+    box-shadow: none;
+    width: 100%;
+    padding: 0;
+  }
+}

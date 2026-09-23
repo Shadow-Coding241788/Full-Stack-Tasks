@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.timetable-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: normal;
+    margin: 5px 0 15px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid #000;
+    text-align: center;
+    vertical-align: top;
+    padding: 4px 2px;
+    font-size: 11px;
+    word-wrap: break-word;
+}
+
+/* Fixed column widths */
+.day-col {
+    width: 8%;
+    font-size: 32px;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+.time-col {
+    width: 10.22%;
+}
+
+/* Table Header Formatting */
+thead th {
+    font-weight: normal;
+    height: 45px;
+}
+
+.time-header {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.time-sub {
+    font-size: 9px;
+    color: #333;
+    margin-top: 4px;
+}
+
+/* Cell Content Layout */
+.cell-content {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 0;
+}
+
+.teacher {
+    font-size: 9px;
+    color: #000;
+}
+
+.subject {
+    font-weight: bold;
+    font-size: 11px;
+    margin: 4px 0;
+    line-height: 1.2;
+}
+
+.room {
+    font-size: 10px;
+    color: #000;
+}
+
+/* Footer Info */
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 5px;
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-left">
+            <i class="fa-brands fa-facebook fb-logo"></i>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search Facebook">
+            </div>
+        </div>
+
+        <div class="nav-center">
+            <a href="#" class="nav-tab active"><i class="fa-solid fa-house"></i></a>
+            <a href="#" class="nav-tab"><i class="fa-solid fa-tv"></i></a>
+            <a href="#" class="nav-tab"><i class="fa-solid fa-store"></i></a>
+            <a href="#" class="nav-tab"><i class="fa-solid fa-users"></i></a>
+            <a href="#" class="nav-tab"><i class="fa-solid fa-gamepad"></i></a>
+        </div>
+
+        <div class="nav-right">
+            <div class="profile-pill">
+                <div class="avatar avatar-sm bg-photo-josephine"></div>
+                <span>Josephine</span>
+            </div>
+            <button class="icon-btn"><i class="fa-solid fa-plus"></i></button>
+            <button class="icon-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
+            <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+            <button class="icon-btn active-dropdown"><i class="fa-solid fa-caret-down"></i></button>
+
+            <!-- Active Open Profile Dropdown Menu -->
+            <div class="profile-menu">
+                <div class="menu-user-header">
+                    <div class="avatar avatar-lg bg-photo-josephine"></div>
+                    <div>
+                        <h3>Josephine Miller</h3>
+                        <a href="#">See Your Profile</a>
+                    </div>
+                </div>
+
+                <hr class="menu-divider">
+
+                <ul class="menu-list">
+                    <li>
+                        <div class="menu-icon"><i class="fa-solid fa-gear"></i></div>
+                        <span class="menu-text">Settings & Privacy</span>
+                        <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                    </li>
+                    <li>
+                        <div class="menu-icon"><i class="fa-solid fa-circle-question"></i></div>
+                        <span class="menu-text">Help & Support</span>
+                        <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                    </li>
+                    <li>
+                        <div class="menu-icon"><i class="fa-solid fa-moon"></i></div>
+                        <span class="menu-text">Dark Mode</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <div class="menu-icon"><i class="fa-solid fa-rotate-left"></i></div>
+                        <span class="menu-text">Switch to Classic Facebook</span>
+                    </li>
+                    <li>
+                        <div class="menu-icon"><i class="fa-solid fa-comment-dots"></i></div>
+                        <span class="menu-text">Send Feedback</span>
+                    </li>
+                    <li>
+                        <div class="menu-icon"><i class="fa-solid fa-right-from-bracket"></i></div>
+                        <span class="menu-text">Log Out</span>
+                    </li>
+                </ul>
+
+                <div class="menu-footer">
+                    <p>Privacy · Terms · Advertising · Ad Choices · Cookies · More · Facebook © 2026</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="main-wrapper">
+
+        <!-- Left Navigation Sidebar -->
+        <aside class="sidebar-left">
+            <ul class="side-menu">
+                <li class="side-item">
+                    <div class="avatar avatar-md bg-photo-josephine"></div>
+                    <span>Josephine Williams</span>
+                </li>
+                <li class="side-item">
+                    <i class="fa-solid fa-tv side-icon icon-blue"></i>
+                    <span>Watch</span>
+                </li>
+                <li class="side-item">
+                    <i class="fa-solid fa-calendar-day side-icon icon-red"></i>
+                    <span>Events</span>
+                </li>
+                <li class="side-item">
+                    <i class="fa-solid fa-user-group side-icon icon-blue"></i>
+                    <span>Friends</span>
+                </li>
+                <li class="side-item">
+                    <i class="fa-solid fa-clock-rotate-left side-icon icon-blue"></i>
+                    <span>Memories</span>
+                </li>
+            </ul>
+
+            <button class="btn-see-more">See More <i class="fa-solid fa-chevron-down"></i></button>
+
+            <hr class="sidebar-divider">
+
+            <div class="shortcuts-header">
+                <h3>Shortcuts</h3>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+
+            <ul class="side-menu">
+                <li class="side-item">
+                    <div class="shortcut-img bg-pomeroy"></div>
+                    <span>Save the Pomeroy Theatre</span>
+                </li>
+                <li class="side-item">
+                    <div class="shortcut-img bg-trips"></div>
+                    <span>Weekend Trips</span>
+                </li>
+                <li class="side-item">
+                    <div class="shortcut-img bg-jasper"></div>
+                    <span>Jasper's Market</span>
+                </li>
+                <li class="side-item">
+                    <div class="shortcut-img bg-redtable"></div>
+                    <span>Red Table Talk Group</span>
+                </li>
+                <li class="side-item">
+                    <div class="shortcut-img bg-hiking"></div>
+                    <span>Best Hidden Hiking Trails</span>
+                </li>
+            </ul>
+
+            <button class="btn-see-more">See More <i class="fa-solid fa-chevron-down"></i></button>
+        </aside>
+
+        <!-- Main Feed Area -->
+        <main class="feed-container">
+
+            <!-- Stories Bar -->
+            <div class="stories-wrapper">
+                <div class="story-card create-story-card">
+                    <div class="story-bg bg-photo-josephine"></div>
+                    <div class="create-story-btn"><i class="fa-solid fa-plus"></i></div>
+                    <p>Add to Story</p>
+                </div>
+
+                <div class="story-card bg-story-tom">
+                    <div class="story-avatar bg-avatar-tom"></div>
+                    <p>Tom Russo</p>
+                </div>
+
+                <div class="story-card bg-story-betty">
+                    <div class="story-avatar bg-avatar-betty"></div>
+                    <p>Betty Chen</p>
+                </div>
+
+                <div class="story-card bg-story-dennis">
+                    <div class="story-avatar bg-avatar-dennis"></div>
+                    <p>Dennis Han</p>
+                </div>
+
+                <div class="story-card bg-story-cynthia">
+                    <div class="story-avatar bg-avatar-cynthia"></div>
+                    <p>Cynthia Lopez</p>
+                </div>
+
+                <button class="story-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <!-- Create Post Box -->
+            <div class="feed-card create-post">
+                <div class="post-input-row">
+                    <div class="avatar avatar-md bg-photo-josephine"></div>
+                    <input type="text" placeholder="What's on your mind, Josephine?">
+                </div>
+                <hr class="card-divider">
+                <div class="post-actions-row">
+                    <button class="post-act-btn"><i class="fa-solid fa-images icon-green"></i> Photo/Video</button>
+                    <button class="post-act-btn"><i class="fa-solid fa-user-tag icon-blue"></i> Tag Friends</button>
+                    <button class="post-act-btn"><i class="fa-solid fa-face-smile icon-yellow"></i> Feeling/Activity</button>
+                </div>
+            </div>
+
+            <!-- Feed Post Module -->
+            <div class="feed-card post-card">
+                <div class="post-header">
+                    <div class="post-user-info">
+                        <div class="avatar avatar-md bg-avatar-fiona"></div>
+                        <div>
+                            <h4>Fiona Ozeri</h4>
+                            <span class="post-meta">5 hrs · <i class="fa-solid fa-earth-americas"></i></span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-ellipsis post-more-btn"></i>
+                </div>
+
+                <p class="post-text">Best fireworks show I've ever seen!</p>
+
+                <div class="post-image-container">
+                    <div class="fireworks-image"></div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Right Contacts Sidebar -->
+        <aside class="sidebar-right">
+            <div class="contacts-list">
+                <div class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar-sm bg-avatar-eric"></div>
+                        <span class="online-indicator"></span>
+                    </div>
+                    <span>Eric Jones</span>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar-sm bg-avatar-cynthia"></div>
+                        <span class="online-indicator"></span>
+                    </div>
+                    <span>Cynthia Lopez</span>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar-sm bg-avatar-betty"></div>
+                        <span class="online-indicator"></span>
+                    </div>
+                    <span>Betty Chen</span>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar-sm bg-avatar-tina"></div>
+                        <span class="online-indicator"></span>
+                    </div>
+                    <span>Tina Lim</span>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-avatar-wrap">
+                        <div class="avatar avatar-sm bg-avatar-molly"></div>
+                        <span class="online-indicator"></span>
+                    </div>
+                    <span>Molly Carter</span>
+                </div>
+            </div>
+
+            <!-- Floating Action (+) Button -->
+            <button class="floating-add-btn"><i class="fa-solid fa-plus"></i></button>
+        </aside>
+
+    </div>
+
+</body>
+</html>
