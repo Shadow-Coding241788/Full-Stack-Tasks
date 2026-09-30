@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            ShopEase
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">
+                        Products
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviews">
+                        Reviews
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="d-flex gap-2">
+
+                <a href="login.html"
+                   class="btn btn-outline-light">
+                    Login
+                </a>
+
+                <a href="signup.html"
+                   class="btn btn-primary">
+                    Sign Up
+                </a>
+
+                <a href="cart.html"
+                   class="btn btn-warning">
+                    Cart
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- Hero Section -->
+
+<section class="hero-section">
+
+    <div class="container py-5">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7 text-white">
+
+                <span class="badge bg-warning text-dark mb-3">
+                    NEW COLLECTION
+                </span>
+
+                <h1 class="display-4 fw-bold">
+                    Everything You Need,
+                    All in One Place
+                </h1>
+
+                <p class="lead">
+                    Shop quality products at affordable prices
+                    with a fast and simple shopping experience.
+                </p>
+
+                <a href="#products"
+                   class="btn btn-light btn-lg">
+                    Shop Now
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-5 mt-4">
+
+                <div class="hero-card bg-white text-dark
+                            rounded-4 shadow p-4 text-center">
+
+                    <h3 class="fw-bold">
+                        Special Offer
+                    </h3>
+
+                    <p>
+                        Get up to
+                    </p>
+
+                    <div class="display-3 fw-bold text-primary">
+                        30%
+                    </div>
+
+                    <p>
+                        off selected products
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Products -->
+
+<section id="products" class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                Featured Products
+            </h2>
+
+            <p class="text-muted">
+                Choose from our popular collection
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- Product 1 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card product-card h-100 shadow-sm">
+
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80"
+                         class="card-img-top product-image"
+                         alt="Smartphone">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Smartphone
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Modern smartphone with premium features.
+                        </p>
+
+                        <h5 class="text-primary">
+                            $499
+                        </h5>
+
+                        <button class="btn btn-primary w-100">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 2 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card product-card h-100 shadow-sm">
+
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                         class="card-img-top product-image"
+                         alt="Headphones">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Headphones
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Wireless headphones with clear sound.
+                        </p>
+
+                        <h5 class="text-primary">
+                            $129
+                        </h5>
+
+                        <button class="btn btn-primary w-100">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 3 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card product-card h-100 shadow-sm">
+
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                         class="card-img-top product-image"
+                         alt="Running Shoes">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Running Shoes
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Comfortable shoes for everyday activity.
+                        </p>
+
+                        <h5 class="text-primary">
+                            $89
+                        </h5>
+
+                        <button class="btn btn-primary w-100">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 4 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card product-card h-100 shadow-sm">
+
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+                         class="card-img-top product-image"
+                         alt="Smart Watch">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Smart Watch
+                        </h5>
+
+                        <p class="card-text text-muted">
+                            Track your activity and stay connected.
+                        </p>
+
+                        <h5 class="text-primary">
+                            $159
+                        </h5>
+
+                        <button class="btn btn-primary w-100">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Reviews -->
+
+<section id="reviews" class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                Customer Reviews
+            </h2>
+
+            <p class="text-muted">
+                What our customers say
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="card review-card h-100 shadow-sm border-0">
+
+                    <div class="card-body">
+
+                        <h5>
+                            Ali Khan
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★★
+                        </div>
+
+                        <p class="text-muted">
+                            Great website and very easy ordering
+                            process. My order arrived quickly.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card review-card h-100 shadow-sm border-0">
+
+                    <div class="card-body">
+
+                        <h5>
+                            Sarah Ahmed
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★☆
+                        </div>
+
+                        <p class="text-muted">
+                            The products were exactly as shown.
+                            I will definitely shop here again.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card review-card h-100 shadow-sm border-0">
+
+                    <div class="card-body">
+
+                        <h5>
+                            Hamza Malik
+                        </h5>
+
+                        <div class="rating">
+                            ★★★★★
+                        </div>
+
+                        <p class="text-muted">
+                            Simple interface, good prices,
+                            and a smooth checkout experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer class="bg-dark text-white text-center py-4">
+
+    <p class="mb-0">
+        © 2026 ShopEase. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
