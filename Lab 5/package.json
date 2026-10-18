@@ -1,0 +1,10 @@
+{
+  "name": "dabbu-campusflow",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node run.js",
+    "test": "node verification.test.js"
+  }
+}
