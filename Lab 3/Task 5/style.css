@@ -1,0 +1,376 @@
+/* =========================================================
+   IEEE CONFERENCE TEMPLATE + BOOTSTRAP
+   ========================================================= */
+
+@page {
+  size: letter;
+  margin: 0.75in 0.625in 1in 0.625in;
+}
+
+:root {
+  --font-serif: "Times New Roman", Times, serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --text-color: #000000;
+  --bg-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e2e8f0;
+  font-family: var(--font-serif);
+  color: var(--text-color);
+  line-height: 1.15;
+  font-size: 10pt;
+  padding: 24px 0;
+}
+
+/* =========================================================
+   PRINT BUTTON
+   ========================================================= */
+
+.print-actions {
+  text-align: center;
+}
+
+.print-actions button {
+  font-family: var(--font-sans);
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   PAPER
+   ========================================================= */
+
+.ieee-paper {
+  background-color: var(--bg-color);
+  width: 8.5in;
+  min-height: 11in;
+  padding: 0.75in 0.625in 1in 0.625in;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.paper-header {
+  margin-bottom: 16pt;
+}
+
+.paper-title {
+  font-size: 24pt;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 4pt;
+}
+
+.title-note {
+  font-size: 9pt;
+  font-style: italic;
+  margin-bottom: 16pt;
+}
+
+
+/* =========================================================
+   AUTHORS
+   ========================================================= */
+
+.authors-grid {
+  text-align: center;
+}
+
+.author-block {
+  display: flex;
+  flex-direction: column;
+  font-size: 9pt;
+  font-style: italic;
+}
+
+.author-name {
+  font-size: 10pt;
+  font-style: normal;
+}
+
+
+/* =========================================================
+   TWO COLUMN PAPER
+   ========================================================= */
+
+.paper-body {
+  column-count: 2;
+  column-gap: 0.24in;
+  column-fill: balance;
+  text-align: justify;
+}
+
+.paper-body section {
+  break-inside: auto;
+}
+
+p {
+  text-indent: 1em;
+  margin-bottom: 4pt;
+  font-size: 10pt;
+}
+
+
+/* =========================================================
+   ABSTRACT
+   ========================================================= */
+
+.abstract-section {
+  margin-bottom: 8pt;
+}
+
+.abstract-text,
+.keywords-text {
+  text-indent: 0;
+  font-size: 9pt;
+  line-height: 1.15;
+}
+
+.keywords-text {
+  margin-top: 4pt;
+}
+
+
+/* =========================================================
+   FUNDING
+   ========================================================= */
+
+.funding-box {
+  border: 1px solid #000;
+  border-radius: 0;
+  padding: 6pt 10pt;
+  font-size: 9pt;
+  margin-bottom: 12pt;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h2 {
+  font-size: 10pt;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 4pt;
+  break-after: avoid;
+}
+
+h3 {
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: italic;
+  text-indent: 1em;
+  margin-top: 8pt;
+  margin-bottom: 3pt;
+  break-after: avoid;
+}
+
+
+/* =========================================================
+   LIST
+   ========================================================= */
+
+.paper-bullet-list {
+  margin-left: 1.5em;
+  font-size: 10pt;
+  margin-bottom: 4pt;
+}
+
+
+/* =========================================================
+   EQUATIONS
+   ========================================================= */
+
+.equation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6pt 0;
+  text-indent: 0;
+  padding: 0 8px;
+}
+
+.eq-number {
+  margin-left: auto;
+}
+
+
+/* =========================================================
+   FIGURES
+   ========================================================= */
+
+.paper-figure {
+  margin: 10pt 0;
+  text-indent: 0;
+  text-align: center;
+  break-inside: avoid;
+}
+
+.figure-placeholder {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9pt;
+  color: #333;
+  margin-bottom: 4pt;
+}
+
+figcaption {
+  font-size: 8pt;
+  text-align: justify;
+  line-height: 1.1;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.paper-table {
+  margin: 10pt 0;
+  text-indent: 0;
+  text-align: center;
+  break-inside: avoid;
+}
+
+.table-caption {
+  font-size: 8pt;
+  margin-bottom: 4pt;
+  text-transform: uppercase;
+}
+
+.table-caption span {
+  font-weight: normal;
+}
+
+.paper-table table {
+  width: 100%;
+  font-size: 8pt;
+  margin-bottom: 0;
+}
+
+.paper-table th,
+.paper-table td {
+  padding: 3pt 4pt;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-footnote {
+  font-size: 7.5pt;
+  text-align: left;
+  margin-top: 2pt;
+}
+
+
+/* =========================================================
+   REFERENCES
+   ========================================================= */
+
+.references h2 {
+  margin-bottom: 6pt;
+}
+
+.references-list {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: ref-counter;
+}
+
+.references-list li {
+  font-size: 8pt;
+  line-height: 1.15;
+  margin-bottom: 4pt;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+  counter-increment: ref-counter;
+}
+
+.references-list li::before {
+  content: "[" counter(ref-counter) "] ";
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .ieee-paper {
+    width: 95%;
+    padding: 30px;
+  }
+
+  .paper-body {
+    column-count: 1;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  body {
+    padding: 10px 0;
+  }
+
+  .ieee-paper {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .paper-title {
+    font-size: 20pt;
+  }
+
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  body {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .print-actions {
+    display: none !important;
+  }
+
+  .ieee-paper {
+    box-shadow: none;
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+  }
+
+  .paper-body {
+    column-count: 2;
+  }
+
+  .authors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}

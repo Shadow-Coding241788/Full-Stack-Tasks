@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-width: 1000px;
+}
+
+.timetable-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px;
+}
+
+.timetable-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.timetable-table th,
+.timetable-table td {
+    border-color: #000 !important;
+    text-align: center;
+    vertical-align: top;
+    padding: 4px 2px;
+    font-size: 11px;
+    word-wrap: break-word;
+}
+
+.timetable-table th:not(.day-col) {
+    width: 10.22%;
+    height: 45px;
+    font-weight: normal;
+}
+
+.day-col {
+    width: 8%;
+    font-size: 32px !important;
+    vertical-align: middle !important;
+    font-weight: normal;
+}
+
+.time-header {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.time-sub {
+    font-size: 9px;
+    color: #333;
+    margin-top: 4px;
+}
+
+.cell-content {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 0;
+}
+
+.teacher {
+    font-size: 9px;
+    color: #000;
+}
+
+.subject {
+    font-weight: bold;
+    font-size: 11px;
+    margin: 4px 0;
+    line-height: 1.2;
+}
+
+.room {
+    font-size: 10px;
+    color: #000;
+}
