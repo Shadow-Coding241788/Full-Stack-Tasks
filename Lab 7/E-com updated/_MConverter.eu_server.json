@@ -1,0 +1,125 @@
+const http = require("http");
+const fs = require("fs");
+const path = require("path");
+
+const productsFile = path.join(__dirname, "products.json");
+const cartFile = path.join(__dirname, "cart.json");
+
+if (!fs.existsSync(productsFile)) {
+  fs.writeFileSync(productsFile, "[]");
+}
+
+if (!fs.existsSync(cartFile)) {
+  fs.writeFileSync(cartFile, "[]");
+}
+
+function readData(file) {
+  return JSON.parse(fs.readFileSync(file, "utf8"));
+}
+
+function saveData(file, data) {
+  fs.writeFileSync(file, JSON.stringify(data, null, 2));
+}
+
+function send(res, status, data) {
+  res.writeHead(status, { "Content-Type": "application/json" });
+  res.end(JSON.stringify(data));
+}
+
+function readBody(req, callback) {
+  let body = "";
+
+  req.on("data", (chunk) => {
+    body += chunk;
+  });
+
+  req.on("end", () => {
+    callback(JSON.parse(body || "{}"));
+  });
+}
+
+const server = http.createServer((req, res) => {
+  const parts = req.url.split("/").filter(Boolean);
+  const moduleName = parts[0];
+  const id = parts[1];
+
+  if (moduleName === "products") {
+    let data = readData(productsFile);
+
+    if (req.method === "GET" && !id) {
+      return send(res, 200, data);
+    }
+
+    if (req.method === "GET" && id) {
+      const item = data.find((item) => item.id === id);
+      return item ? send(res, 200, item) : send(res, 404, { message: "Product not found" });
+    }
+
+    if (req.method === "POST") {
+      return readBody(req, (body) => {
+        const item = { ...body, id: Date.now().toString() };
+        data.push(item);
+        saveData(productsFile, data);
+        send(res, 201, item);
+      });
+    }
+
+    if (req.method === "PUT" && id) {
+      return readBody(req, (body) => {
+        const index = data.findIndex((item) => item.id === id);
+        if (index === -1) {
+          return send(res, 404, { message: "Product not found" });
+        }
+        data[index] = { ...data[index], ...body, id };
+        saveData(productsFile, data);
+        send(res, 200, data[index]);
+      });
+    }
+
+    if (req.method === "DELETE" && id) {
+      const newData = data.filter((item) => item.id !== id);
+      if (newData.length === data.length) {
+        return send(res, 404, { message: "Product not found" });
+      }
+      saveData(productsFile, newData);
+      return send(res, 200, { message: "Product deleted" });
+    }
+  }
+
+  if (moduleName === "cart") {
+    let data = readData(cartFile);
+
+    if (req.method === "GET") {
+      return send(res, 200, data);
+    }
+
+    if (req.method === "POST") {
+      return readBody(req, (body) => {
+        const item = { ...body, id: Date.now().toString() };
+        data.push(item);
+        saveData(cartFile, data);
+        send(res, 201, item);
+      });
+    }
+
+    if (req.method === "DELETE" && id) {
+      const newData = data.filter((item) => item.id !== id);
+      if (newData.length === data.length) {
+        return send(res, 404, { message: "Cart item not found" });
+      }
+      saveData(cartFile, newData);
+      return send(res, 200, { message: "Cart item deleted" });
+    }
+
+    if (req.method === "DELETE" && !id) {
+      saveData(cartFile, []);
+      return send(res, 200, { message: "Cart cleared" });
+    }
+  }
+
+  send(res, 404, { message: "Route not found" });
+});
+
+server.listen(3000, () => {
+  console.log("Server running at http://localhost:3000");
+});
